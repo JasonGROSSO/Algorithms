@@ -4,38 +4,53 @@ public static class ArrayProblems
 {
     public static bool AreArraysEqual<T>(T[] xs, T[] ys)
     {
-        throw new NotImplementedException();
+        return Enumerable.SequenceEqual(xs, ys);
     }
 
     public static void Swap<T>(T[] xs, int a, int b)
     {
+        T temp = xs[a];
         xs[a] = xs[b];
-        xs[b] = xs[a];
+        xs[b] = temp;
     }
 
     public static T FirstElement<T>(T[] xs)
     {
-        throw new NotImplementedException();
+        if (xs == null || xs.Length == 0)
+        {
+            throw new IndexOutOfRangeException("The array is null or empty.");
+        }
+
+        return xs[0];
     }
 
     public static T LastElement<T>(T[] xs)
     {
-        throw new NotImplementedException();
+        if (xs == null || xs.Length == 0)
+        {
+            throw new Exception("The array is null or empty.");
+        }
+
+        return xs[xs.Length - 1];
     }
 
     public static T MiddleElement<T>(T[] xs)
     {
-        throw new NotImplementedException();
+        return (T)xs[xs.Length / 2];
     }
 
     public static void Reverse<T>(T[] xs)
     {
-        throw new NotImplementedException();
+        Array.Reverse(xs);
     }
 
     public static int CountElement<T>(T[] xs, T element)
-    { 
-        throw new NotImplementedException();
+    {
+        if (xs == null || xs.Length == 0)
+        {
+            throw new ArgumentNullException(nameof(xs));
+        }
+        return xs.Count(x => EqualityComparer<T>.Default.Equals(x, element));
     }
 
     public static string ToCommaDelimitedString<T>(T[] xs)

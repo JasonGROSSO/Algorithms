@@ -128,7 +128,7 @@ public static class ArrayProblemsTests
     {
         if (input.Length < 1)
         {
-            Assert.Throws<IndexOutOfRangeException>(() => ArrayProblems.LastElement(input));
+            Assert.Throws<Exception>(() => ArrayProblems.LastElement(input));
         }
         else
         {

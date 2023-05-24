@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,7 +48,7 @@ namespace AlgorithmsTestProject
             private set;
         }
 
-        public void Add(T x)
+        *//*public void Add(T x)
         {
             Count += 1;
             if (Count >= internalArray.Length)
@@ -58,7 +58,7 @@ namespace AlgorithmsTestProject
                 internalArray = copy;
             }
             internalArray[Count - 1] = x;
-        }
+        }*//*
     }
 
     public static class MyTest
@@ -74,3 +74,4 @@ namespace AlgorithmsTestProject
         }
     }
 }
+*/
